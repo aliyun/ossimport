@@ -1,5 +1,9 @@
 # OssImport ChangeLog
 
+## Version: 2.3.1; Date: 2017-12-20
+### Change description
+- Fixed: The configuration isAuditAfterImport is not effective
+
 ## Version: 2.3.0; Date: 2017-12-15
 ### Change description
 - Added: Data migration through Express Connect
