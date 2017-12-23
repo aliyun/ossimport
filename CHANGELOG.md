@@ -1,43 +1,43 @@
 # OssImport ChangeLog
 
-## 版本号：2.3.0 日期：2017-12-15
-### 变更内容
-- 增加：支持使用高速通道迁移数据
-- 修复：集团开发规约格式化代码
+## Version: 2.3.0; Date: 2017-12-15
+### Change description
+- Added: Data migration through Express Connect
+- Fixed: Group-developed simplified code formatting
 
-## 版本号：2.2.4 日期：2017-10-23
-### 变更内容
-- 增加：版本化管理，支持version命令，方便问题排除，详见[#OSS-2793](https://workitem.aone.alibaba-inc.com/project/240655/issue/12720334)
-- 修复：进程内存控制，防止占用过大内存被杀，详见[#OSS-2794](https://workitem.aone.alibaba-inc.com/project/111257/issue/12720608)
-- 修复：本地大文件上传优化，从单线程上传优化成多线程并发上传
-- 修复：通过System.getProperty配置项变成在配置文件中配置，详见[#OSS-2756](https://workitem.aone.alibaba-inc.com/issue/12427969?stat=1.5.10&toPage=1&projectId=40654008)
-- 修复：把异常信息记录到日志
+## Version: 2.2.4; Date: 2017-10-23
+### Change description
+- Added: Version-based management and support for the "version" command to facilitate troubleshooting. For more information, see [#OSS-2793](https://workitem.aone.alibaba-inc.com/project/240655/issue/12720334)
+- Fixed: Process memory control to prevent the kill action due to excessive memory usage. For more information, see [#OSS-2794](https://workitem.aone.alibaba-inc.com/project/111257/issue/12720608)
+- Fixed: Single-thread uploading of local large files optimized to multithread concurrent uploading
+- Fixed: System.getProperty configuration item introduced to enable configuration using configuration files. For more information, see [#OSS-2756](https://workitem.aone.alibaba-inc.com/issue/12427969?stat=1.5.10&toPage=1&projectId=40654008)
+- Fixed: Abnormal information logging
 
-## 版本号：2.2.3 日期：2017-10-10
-### 变更内容
-- 增加：又拍云支持从CDN下载文件
-- 增加：支持配置文件设置网络超时时间
-- 修复：又拍createSingleThreadTask报NPE，详见[#OSS-27870](https://aone.alibaba-inc.com/issue/12671326)
-- 修复：dispatcherThreadNum的默认值修改为1
-- 修复：Linux单机版在非工作目录下启动无法正常运行
+## Version: 2.2.3; Date: 2017-10-10
+### Change description
+- Added: UPYUN's support for file download from CDN
+- Added: Support for network time-out setting in configuration files
+- Fixed: NPE reported by createSingleThreadTask of UPYUN. For more information, see [#OSS-27870](https://aone.alibaba-inc.com/issue/12671326)
+- Fixed: Default value of dispatcherThreadNum changed to 1
+- Fixed: Abnormal running of Linux stand-alone systems after being started in a non-working directory
 
-## 版本号：2.2.2 日期：2017-09-11
-### 变更内容
-- 修复：配置文件动态加载
-- 修复：重试级别优化，从Task到File
-- 修复：Job配置文件支持isSkipExistFile
+## Version: 2.2.2; Date: 2017-09-11
+### Change description
+- Fixed: Dynamic loading of configuration files
+- Fixed: Retry level optimization from Task to File
+- Fixed: Support for isSkipExistFile in the Job configuration file
 
-## 版本号：2.2.1 日期：2017-07-29
-### 变更内容
-- 修复：http等迁移数据时流控无效
-- 修复：Windows脚本改成英文
-- 增加：README的内容
+## Version: 2.2.1; Date: 2017-07-29
+### Change description
+- Fixed: Throttling ineffective during HTTP-based data migration
+- Fixed: Windows scripts available in English
+- Added: README content
 
-## 版本号：2.2.0 日期：2017-07-12
-### 变更内容。
-- 增加：支持Azure Blob迁移到OSS
-- 增加：单机版本，增加Linux命令行console.sh、一键执行脚本import.sh
-- 增加：单机版本，增加Windows命令行console.sh、一键执行脚本import.bat，去除其它bat
-- 增加：分布式版本，增加Linux命令行console.sh
-- 修复：命名优化，slave->worker, dispatcher->tasktracker, 命名空间ossimport2->ossimport, Jar名称变更
-- 修复：awk在Ubuntu的目录是/usr/bin/awk而不是/bin/awk，awk等命令去除目录
+## Version: 2.2.0; Date: 2017-07-12
+### Change description
+- Added: Migration from Azure Blob to OSS
+- Added: Linux command line console.sh and one-click execution script import.sh added to the stand-alone version
+- Added: Windows command line console.sh and one-click execution script import.bat added to the stand-alone version, while other .bat scripts are removed
+- Added: Linux command line console.sh added to the distributed version
+- Fixed: Name optimization, including "slave" changed to "worker", "dispatcher" to "tasktracker", namespace "ossimport2" to "ossimport", and JAR name changed
+- Fixed: The Ubuntu directory for AWK is /usr/bin/awk instead of /bin/awk; directories are removed from AWK and other commands.
